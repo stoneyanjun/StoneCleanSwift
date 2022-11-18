@@ -18,7 +18,12 @@ protocol ___VARIABLE_sceneName___DataStore {
 }
 
 class ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___BusinessLogic, ___VARIABLE_sceneName___DataStore {
+    let config: ___VARIABLE_sceneName___Config
     var presenter: ___VARIABLE_sceneName___PresentationLogic?
+    
+    init(config: ___VARIABLE_sceneName___Config) {
+        self.config = config
+    }
     // var name: String = ""
     
     // MARK: Do something

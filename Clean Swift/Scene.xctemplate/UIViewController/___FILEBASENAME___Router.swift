@@ -9,7 +9,7 @@
 
 import UIKit
 
-@objc protocol ___VARIABLE_sceneName___RoutingLogic {
+protocol ___VARIABLE_sceneName___RoutingLogic {
     
 }
 
