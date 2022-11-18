@@ -7,15 +7,15 @@
 //
 //
 
-import SwifterSwift
 import SnapKit
+import SwifterSwift
 import UIKit
 
-protocol ___VARIABLE_sceneName___DisplayLogic: class {
+protocol ___VARIABLE_sceneName___DisplayLogic: AnyObject {
     func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
 }
 
-class ___VARIABLE_sceneName___ViewController: StBaseViewController {
+class ___VARIABLE_sceneName___ViewController: UIViewController {
     var interactor: ___VARIABLE_sceneName___BusinessLogic?
     var router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
     
