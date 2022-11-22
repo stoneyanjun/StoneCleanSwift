@@ -10,7 +10,7 @@
 import UIKit
 
 protocol ___VARIABLE_sceneName___BusinessLogic {
-    func doSomething(request: ___VARIABLE_sceneName___.Something.Request)
+    func doSomething(request: ___VARIABLE_sceneName___.Request)
 }
 
 protocol ___VARIABLE_sceneName___DataStore {
@@ -28,8 +28,8 @@ class ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___BusinessLogic,
     
     // MARK: Do something
     
-    func doSomething(request: ___VARIABLE_sceneName___.Something.Request) {
-        let response = ___VARIABLE_sceneName___.Something.Response()
+    func doSomething(request: ___VARIABLE_sceneName___.Request) {
+        let response = ___VARIABLE_sceneName___.Response()
         presenter?.presentSomething(response: response)
     }
 }

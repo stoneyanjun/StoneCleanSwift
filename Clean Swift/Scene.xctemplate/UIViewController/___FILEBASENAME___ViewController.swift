@@ -12,10 +12,11 @@ import SwifterSwift
 import UIKit
 
 protocol ___VARIABLE_sceneName___DisplayLogic: AnyObject {
-    func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
+    func displayLoading(with status: Bool)
+    func displaySomething(viewModel: ___VARIABLE_sceneName___.ViewModel)
 }
 
-class ___VARIABLE_sceneName___ViewController: UIViewController {
+class ___VARIABLE_sceneName___ViewController: StBaseViewController {
     var interactor: ___VARIABLE_sceneName___BusinessLogic?
     var router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
     
@@ -35,7 +36,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
     
     private func setup() {
         let viewController = self
-        let interactor = ___VARIABLE_sceneName___Interactor()
+        let interactor = ___VARIABLE_sceneName___Interactor(config: ___VARIABLE_sceneName___Config())
         let presenter = ___VARIABLE_sceneName___Presenter()
         let router = ___VARIABLE_sceneName___Router()
         viewController.interactor = interactor
@@ -76,6 +77,10 @@ extension ___VARIABLE_sceneName___ViewController {
 }
 
 extension ___VARIABLE_sceneName___ViewController: ___VARIABLE_sceneName___DisplayLogic {
-    func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel) {
+    func displayLoading(with status: Bool) {
+        showLoadingView(status)
+    }
+    
+    func displaySomething(viewModel: ___VARIABLE_sceneName___.ViewModel) {
     }
 }

@@ -18,7 +18,7 @@ struct ___VARIABLE_sceneName___Configurator {
 
     func createScene() -> UIViewController {
         let viewController = ___VARIABLE_sceneName___ViewController()
-        let interactor = ___VARIABLE_sceneName___Interactor(config; config)
+        let interactor = ___VARIABLE_sceneName___Interactor(config: config)
         let presenter = ___VARIABLE_sceneName___Presenter()
         let router = ___VARIABLE_sceneName___Router()
         
